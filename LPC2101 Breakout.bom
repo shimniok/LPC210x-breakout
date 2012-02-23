@@ -1,0 +1,20 @@
+Partlist exported from C:/Documents and Settings/Michael Shimniok/My Documents/Projects/LPC2101/LPC2101 Breakout.sch at 2/8/2012 12:10:58 PM
+
+Ref Part Value       Attributes Package      Description                            Part Num             Manufacturer Name Vendor ID Vendor Part Number Description                                 Price Quantity
+  1 C1   18pF                   C0603        CAPACITOR, American symbol             C1608C0G1H180J       TDK               DK        445-1272-1-ND      CAPACITOR 0603 CERAMIC 18PF 50V C0G 5% 0603 0.10  ?       
+  2 C2   18pF                   C0603        CAPACITOR, American symbol             C1608C0G1H180J       TDK               DK        445-1272-1-ND      CAPACITOR 0603 CERAMIC 18PF 50V C0G 5% 0603 0.10  ?       
+  3 C3   10uF                   C0603        CAPACITOR, American symbol             C1608X5R0J106M_DK    TDK               DK        445-4112-1-ND      CAPACITOR 0603 CERAMIC 10UF 6.3V X5R        0.46  ?       
+  4 C4   0.1uF                  C0603        CAPACITOR, American symbol             CX0603MRX7R6BB104    YAEGO             DK        311-1237-1-ND      CAPACITOR 0603 0.1UF 10V X7R BYPASS LOW ESL 0.469 ?       
+  5 C5   0.1uF                  C0603        CAPACITOR, American symbol             CX0603MRX7R6BB104    YAEGO             DK        311-1237-1-ND      CAPACITOR 0603 0.1UF 10V X7R BYPASS LOW ESL 0.469 ?       
+  6 C7   0.1uF                  C0603        CAPACITOR, American symbol             CX0603MRX7R6BB104    YAEGO             DK        311-1237-1-ND      CAPACITOR 0603 0.1UF 10V X7R BYPASS LOW ESL 0.469 ?       
+  7 C8   0.1uF                  C0603        CAPACITOR, American symbol             CX0603MRX7R6BB104    YAEGO             DK        311-1237-1-ND      CAPACITOR 0603 0.1UF 10V X7R BYPASS LOW ESL 0.469 ?       
+  8 D1                          SOD123       DIODE                                  CGRM4001-G           Comchip           DK        641-1328-1-ND      DIODE SOD123 RECT GP 1A 50V MINI-SMA        0.41  ?       
+  9 IC2  1.8V                   SOT23-5      TLV00XX, TLV01XX LDO Voltage Regulator TLV70018DDCT         Texas Instruments DK        296-25270-1-ND     LDO VOLT REG 200MA 1.8V SOT23-5             0.67  ?       
+ 10 IC3  LPC2101/2/3            LQFP48       LPC2101/2102/2103                      LPC2101FBD48,151     NXP               DK        568-2092-ND        MCU ARM7 MCU 8K FLASH 2K SRAM 70MHZ 48-LQFP 4.41  ?       
+ 11 JP4  DBG                    1X03M        PIN HEADER                             951103-8622-AR       3M                DK        3M9322-ND          CONN HEADER 3POS 2MM VERT T/H               0.45  ?       
+ 12 LED1                        CHIPLED_1206 LED                                    LG N971-KN-1         OSRAM             DK        475-1407-1-ND      LED 1206 GREEN 26MCD 570NM                  0.06  ?       
+ 13 Q1   12MHz                  TC26H        CRYSTAL                                CSA309-12.000MABJ-UB CITIZEN           DK        300-8430-ND        CRYSTAL 12.000 MHZ 18PF CYL                 0.79  ?       
+ 14 R1   330                    R0603        RESISTOR, American symbol              ERJ-3GEYJ331V        Panasonic         DK        P330GCT-ND         RESISTOR 0603 330 5% THICK FILM 100mW       0.02  ?       
+ 15 R7   10k                    R0603        RESISTOR, American symbol              ERJ-3GEYJ103V        Panasonic         DK        P10KGCT-ND         RESISTOR 0603 10K 5% THICK FILM 100mW       0.02  ?       
+ 16 R8   10k                    R0603        RESISTOR, American symbol              ERJ-3GEYJ103V        Panasonic         DK        P10KGCT-ND         RESISTOR 0603 10K 5% THICK FILM 100mW       0.02  ?       
+ 17 S2   PGM                    OS102011MA1Q MARQUARDT SWITCH                       OS102011MA1QS1       C&K               DK        CKN9560-ND         SW SLIDE SHORTING SPDT 0.1A 12V             0.47  ?       
