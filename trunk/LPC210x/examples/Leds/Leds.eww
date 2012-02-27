@@ -9,11 +9,7 @@
       <name>All</name>
       <member>
         <project>Leds</project>
-        <configuration>Jlink - Debug Flash</configuration>
-      </member>
-      <member>
-        <project>Leds</project>
-        <configuration>Jlink - Debug RAM</configuration>
+        <configuration>Bootloader</configuration>
       </member>
     </batchDefinition>
   </batchBuild>
