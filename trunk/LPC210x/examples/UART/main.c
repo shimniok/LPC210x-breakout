@@ -12,48 +12,37 @@
  *       Author      : Stanimir Bonev
  *       Description : Create
  *
- *  This example project shows how to use the IAR Embedded Workbench for ARM
- * to develop code for the IAR-LPC-2103 Mini evaluation board. It shows
- * basic use of parallel I/O, timer and interrupt controller.
- * It starts by showing different patterns on the LEDs .
+ *    2. Modified by Michael Shimniok, verified on LPC2103, changed
+ *       clock speed, switched to UART0
  *
- *  The speed of the moving pattern can be controlled by a B1 button
- * and a B2 change patterns.
+ * This example project shows how to use the IAR Embedded Workbench for ARM
+ * to develop code for the LPC210x Breakout board. 
+ * 
+ *    http://code.google.com/p/bt-arm-breakout/
+ *
+ * It shows basic use of the UART0 peripheral which is the UART connected
+ * to the FTDI breakout 6-pin header
+ *
+ * Set your terminal program to 9600,N,8,1
+ * 
+ * If you see garbage, try resetting the MCU; sometimes the PC and MCU will
+ * get out of sync.
  *
  * Jumpers:
- *  DBG       - install the jumper
- *  ICSP/RUN  - Off position
- * Buttons:
- *  B1        - Change speed
- *  B2        - Change pattern
+ *  DBG       - install in the position closest the MCU (Off)
+ *  PGM       - put in PGM position for programming, off to run
  *
- *    $Revision: 47021 $
  **************************************************************************/
 #include <intrinsics.h>
 #include <stdio.h>
-//#include <lpc210x.h>
 #include <NXP/iolpc2103.h>
-
-// OSC [Hz]
-#define FOSC            12000000UL
-// Core clk [Hz]
-#define FCCLK           60000000UL
-// Per clk [Hz]
-#define PCCLK           (FCCLK/2)
-// Timer tick per second
-#define TICK_PER_SEC    (8UL)
-#define TIM_PER_S(Val)  (PCCLK/Val)
 
 /* Macro Definitions */ 
 #define TEMT       (1<<6) 
 #define LINE_FEED     0xA    
 #define CARRIAGE_RET   0xD 
 
-void serialInit(unsigned char dev, unsigned int baud); 
-void serialPutc(unsigned char dev, char c);
-unsigned char serialEmptyTX(unsigned char dev);
-void clockInit();
-   
+  
 /*************************************************************************
  * Function Name: irq_handler
  * Parameters: none
@@ -121,12 +110,6 @@ int main()
 #endif
 
   ///////// UART0 Initialization /////////
-  
-  /* Baud rate set to 9600 */ 
-  /* PCLK/16 * BAUD */
-  fdr=171;
-  dll=93;
-  dlm=0;
 
   /* Initialize Pin Select Block for Tx and Rx */ 
   PINSEL0=0x5;
@@ -134,10 +117,11 @@ int main()
   U0FCR=0x7;   
   /* Set DLAB and word length set to 8bits */ 
   U0LCR=0x83; // 8 bits, 1 stop, no parity, DLAB = 1         
-  /* Set baud rate */
-  U0FDR = fdr; 
-  U0DLL = dll;      
-  U0DLM = dlm;     
+  /* Baud rate set to 9600 */ 
+  /* PCLK/16 * BAUD */
+  U0FDR = 171; 
+  U0DLL = 93;      
+  U0DLM = 0;     
   /* Clear DLAB */     
   U0LCR=0x03; // 8 bits, 1 stop, no parity, DLAB = 0         
 
