@@ -11,23 +11,20 @@
  *    1. Date        : 6, January 2006
  *       Author      : Stanimir Bonev
  *       Description : Create
+ *    2. Modified by Michael Shimniok, set clock speed to 60MHz,
+ *       gutted original code and replaced with simple loops for
+ *       PWM control of LED
  *
- *  This example project shows how to use the IAR Embedded Workbench for ARM
- * to develop code for the IAR-LPC-2103 Mini evaluation board. It shows
- * basic use of parallel I/O, timer and interrupt controller.
- * It starts by showing different patterns on the LEDs .
+ * This example project shows how to use the IAR Embedded Workbench for ARM
+ * to develop code for the LPC210x Breakout board.
  *
- *  The speed of the moving pattern can be controlled by a B1 button
- * and a B2 change patterns.
+ *     http://code.google.com/p/bt-arm-breakout/
+ *
+ * Demonstrates basic GPIO use and system configuration
  *
  * Jumpers:
- *  DBG       - install the jumper
- *  ICSP/RUN  - Off position
- * Buttons:
- *  B1        - Change speed
- *  B2        - Change pattern
- *
- *    $Revision: 47021 $
+ *  DBG       - install the jumper in position nearest the MCU
+ *  PGM       - In PGM position for programming, off position for run
  **************************************************************************/
 #include <intrinsics.h>
 #include <NXP/iolpc2103.h>
