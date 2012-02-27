@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project>
+  <fileVersion>2</fileVersion>
+  <fileChecksum>3615295082</fileChecksum>
+  <configuration>
+    <name>Jlink - Debug Flash</name>
+    <outputs>
+      <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Threads.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+      <file>$PROJ_DIR$\Jlink - Debug Flash\Exe\UART.out</file>
+      <file>$PROJ_DIR$\Jlink - Debug Flash\Exe\UART.hex</file>
+      <file>$PROJ_DIR$\main.c</file>
+      <file>$PROJ_DIR$\Jlink - Debug Flash\Obj\main.pbi</file>
+      <file>$TOOLKIT_DIR$\inc\c\stdio.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
+      <file>$PROJ_DIR$\Jlink - Debug Flash\Obj\Leds.pbd</file>
+      <file>$PROJ_DIR$\lpc2xxx_cstartup.s</file>
+      <file>$PROJ_DIR$\Jlink - Debug Flash\Obj\UART.pbd</file>
+      <file>$TOOLKIT_DIR$\inc\c\ystdio.h</file>
+      <file>$PROJ_DIR$\Output\Obj\main.o</file>
+      <file>$PROJ_DIR$\Output\Obj\lpc2xxx_cstartup.o</file>
+      <file>$PROJ_DIR$\Output\Obj\UART.pbd</file>
+      <file>$PROJ_DIR$\Output\Exe\UART.out</file>
+      <file>$PROJ_DIR$\Output\Exe\UART.hex</file>
+      <file>$PROJ_DIR$\config\LPC2103_Flash.icf</file>
+      <file>$PROJ_DIR$\Jlink - Debug Flash\Exe\Leds.hex</file>
+      <file>$TOOLKIT_DIR$\inc\NXP\iolpc2102.h</file>
+      <file>$PROJ_DIR$\Serial.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\io_macros.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
+      <file>$PROJ_DIR$\Jlink - Debug Flash\Obj\lpc2xxx_cstartup.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\intrinsics.h</file>
+      <file>$PROJ_DIR$\Jlink - Debug Flash\Exe\Leds.out</file>
+      <file>$TOOLKIT_DIR$\lib\m4t_tl.a</file>
+      <file>$PROJ_DIR$\Jlink - Debug Flash\Obj\main.o</file>
+      <file>$TOOLKIT_DIR$\inc\c\xencoding_limits.h</file>
+      <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
+      <file>$TOOLKIT_DIR$\lib\dl4t_tln.a</file>
+      <file>$TOOLKIT_DIR$\lib\rt4t_al.a</file>
+      <file>$TOOLKIT_DIR$\inc\NXP\iolpc2103.h</file>
+      <file>$TOOLKIT_DIR$\lib\shs_l.a</file>
+      <file>$PROJ_DIR$\Jlink - Debug Flash\List\Leds.map</file>
+      <file>$PROJ_DIR$\Output\Obj\main.pbi</file>
+      <file>$PROJ_DIR$\Serial.cpp</file>
+      <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+      <file>$PROJ_DIR$\Output\List\UART.map</file>
+      <file>$PROJ_DIR$\Output\Obj\Serial.pbi</file>
+      <file>$TOOLKIT_DIR$\lib\dlpp4t_tl_ne.a</file>
+      <file>$PROJ_DIR$\Output\Obj\Serial.o</file>
+    </outputs>
+    <file>
+      <name>[ROOT_NODE]</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 16 39</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\main.c</name>
+      <outputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 13</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 36</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ICCARM</name>
+          <file> 25 30 7 23 38 8 2 29 1 0 12 33 20 22</file>
+        </tool>
+        <tool>
+          <name>BICOMP</name>
+          <file> 25 30 7 23 38 2 29 1 0 12 33 20 22</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Jlink - Debug Flash\Obj\Leds.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 6</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\lpc2xxx_cstartup.s</name>
+      <outputs>
+        <tool>
+          <name>AARM</name>
+          <file> 14</file>
+        </tool>
+      </outputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Jlink - Debug Flash\Obj\UART.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 6</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Output\Obj\UART.pbd</name>
+      <inputs>
+        <tool>
+          <name>BILINK</name>
+          <file> 36</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Output\Exe\UART.out</name>
+      <outputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 39</file>
+        </tool>
+        <tool>
+          <name>OBJCOPY</name>
+          <file> 17</file>
+        </tool>
+      </outputs>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 18 14 13 34 32 27 31</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Jlink - Debug Flash\Exe\Leds.out</name>
+      <inputs>
+        <tool>
+          <name>ILINK</name>
+          <file> 18 24 28 34 32 27 31</file>
+        </tool>
+      </inputs>
+    </file>
+    <file>
+      <name>$PROJ_DIR$\Serial.cpp</name>
+      <outputs>
+        <tool>
+          <name>BICOMP</name>
+          <file> 40</file>
+        </tool>
+      </outputs>
+    </file>
+  </configuration>
+  <configuration>
+    <name>Jlink - Debug RAM</name>
+    <outputs/>
+    <forcedrebuild>
+      <name>[MULTI_TOOL]</name>
+      <tool>ILINK</tool>
+    </forcedrebuild>
+    <forcedrebuild>
+      <name>[REBUILD_ALL]</name>
+    </forcedrebuild>
+  </configuration>
+</project>
+
+
