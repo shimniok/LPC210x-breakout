@@ -1,0 +1,437 @@
+###############################################################################
+#                                                                             #
+# IAR ELF Linker V6.30.6.53336/W32 for ARM              23/Feb/2012  14:18:28 #
+# Copyright 2007-2012 IAR Systems AB.                                         #
+#                                                                             #
+#    Output file  =  C:\Documents and Settings\Michael Shimniok\My            #
+#                    Documents\IAR Embedded Workbench\arm\examples\NXP\LPC210 #
+#                    3\IARMiniDev\Leds\Jlink - Debug Flash\Exe\Leds.out.tmp   #
+#    Map file     =  C:\Documents and Settings\Michael Shimniok\My            #
+#                    Documents\IAR Embedded Workbench\arm\examples\NXP\LPC210 #
+#                    3\IARMiniDev\Leds\Jlink - Debug Flash\List\Leds.map      #
+#    Command line =  "C:\Documents and Settings\Michael Shimniok\My           #
+#                    Documents\IAR Embedded Workbench\arm\examples\NXP\LPC210 #
+#                    3\IARMiniDev\Leds\Jlink - Debug                          #
+#                    Flash\Obj\lpc2xxx_cstartup.o" "C:\Documents and          #
+#                    Settings\Michael Shimniok\My Documents\IAR Embedded      #
+#                    Workbench\arm\examples\NXP\LPC2103\IARMiniDev\Leds\Jlink #
+#                     - Debug Flash\Obj\main.o" --redirect                    #
+#                    _Printf=_PrintfFull --redirect _Scanf=_ScanfFull -o      #
+#                    "C:\Documents and Settings\Michael Shimniok\My           #
+#                    Documents\IAR Embedded Workbench\arm\examples\NXP\LPC210 #
+#                    3\IARMiniDev\Leds\Jlink - Debug Flash\Exe\Leds.out.tmp"  #
+#                    --map "C:\Documents and Settings\Michael Shimniok\My     #
+#                    Documents\IAR Embedded Workbench\arm\examples\NXP\LPC210 #
+#                    3\IARMiniDev\Leds\Jlink - Debug Flash\List\Leds.map"     #
+#                    --config "C:\Documents and Settings\Michael Shimniok\My  #
+#                    Documents\IAR Embedded Workbench\arm\examples\NXP\LPC210 #
+#                    3\IARMiniDev\Leds\config\LPC2103_Flash.icf"              #
+#                    --semihosting --entry __iar_program_start --vfe          #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor       = *
+__SystemLibrary = DLib
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A1":  place at 0x00000000 { ro section .intvec };
+"P1":  place in [from 0x00000000 to 0x000001fb] |
+                [from 0x00000200 to 0x00007fff] { ro };
+"P2":  place in [from 0x40000000 to 0x4000003f] |
+                [from 0x40000120 to 0x40001fdf] {
+          rw, block CSTACK, block SVC_STACK, block IRQ_STACK, block FIQ_STACK,
+          block UND_STACK, block ABT_STACK, block HEAP };
+"P3":  place in [from 0x000001fc to 0x000001ff] { section .crp };
+
+  Section          Kind        Address   Size  Object
+  -------          ----        -------   ----  ------
+"A1":                                    0x40
+  .intvec          ro code  0x00000000   0x40  lpc2xxx_cstartup.o [1]
+                          - 0x00000040   0x40
+
+"P3":                                     0x4
+  .crp             ro code  0x000001fc    0x4  lpc2xxx_cstartup.o [1]
+                          - 0x00000200    0x4
+
+"P1":                                   0x760
+  .text            ro code  0x00000200  0x4e0  main.o [1]
+  Veneer           ro code  0x000006e0    0x4  - Linker created -
+  .text            ro code  0x000006e4   0x10  main.o [1]
+  Veneer           ro code  0x000006f4    0x4  - Linker created -
+  .text            ro code  0x000006f8   0x10  main.o [1]
+  .text            ro code  0x00000708   0xb0  lpc2xxx_cstartup.o [1]
+  .text            ro code  0x000007b8   0x54  data_init3.o [4]
+  .text            ro code  0x0000080c   0x28  zero_init3.o [4]
+  Veneer           ro code  0x00000834    0xc  - Linker created -
+  Veneer           ro code  0x00000840    0xc  - Linker created -
+  Veneer           ro code  0x0000084c    0xc  - Linker created -
+  .text            ro code  0x00000858   0x24  cmain.o [4]
+  .text            ro code  0x0000087c    0x4  low_level_init.o [3]
+  .text            ro code  0x00000880    0xa  exit.o [3]
+  .text            ro code  0x0000088c   0x20  exit.o [5]
+  Veneer           ro code  0x000008ac    0x4  - Linker created -
+  .text            ro code  0x000008b0   0x10  cexit.o [4]
+  .iar.init_table  const    0x000008c0   0x10  - Linker created -
+  .rodata          const    0x000008d0    0xc  main.o [1]
+  .rodata          const    0x000008dc    0x8  main.o [1]
+  .rodata          const    0x000008e4    0x8  main.o [1]
+  .rodata          const    0x000008ec    0x8  main.o [1]
+  .rodata          const    0x000008f4    0x8  main.o [1]
+  .rodata          const    0x000008fc    0x8  main.o [1]
+  .rodata          const    0x00000904    0x8  main.o [1]
+  .rodata          const    0x0000090c    0x8  main.o [1]
+  .rodata          const    0x00000914    0x8  main.o [1]
+  .rodata          const    0x0000091c    0x8  main.o [1]
+  .rodata          const    0x00000924    0x8  main.o [1]
+  .rodata          const    0x0000092c    0x8  main.o [1]
+  .rodata          const    0x00000934    0x8  main.o [1]
+  .rodata          const    0x0000093c    0x8  main.o [1]
+  .rodata          const    0x00000944    0x8  main.o [1]
+  .rodata          const    0x0000094c    0x8  main.o [1]
+  .rodata          const    0x00000954    0x8  main.o [1]
+  .text            ro code  0x0000095c    0x4  xreturnswi.o [5]
+  .rodata          const    0x00000960    0x0  bwt_init3c.o [4]
+                          - 0x00000960  0x760
+
+"P2", part 1 of 2:                        0x8
+  .bss             zero     0x40000120    0x4  main.o [1]
+  .bss             zero     0x40000124    0x4  main.o [1]
+                          - 0x40000128    0x8
+
+"P2", part 2 of 2:                      0x290
+  CSTACK                    0x40000128  0x200  <Block>
+    CSTACK         uninit   0x40000128  0x200  <Block tail>
+  IRQ_STACK                 0x40000328   0x50  <Block>
+    IRQ_STACK      uninit   0x40000328   0x50  <Block tail>
+  SVC_STACK                 0x40000378   0x10  <Block>
+    SVC_STACK      uninit   0x40000378   0x10  <Block tail>
+  FIQ_STACK                 0x40000388   0x10  <Block>
+    FIQ_STACK      uninit   0x40000388   0x10  <Block tail>
+  UND_STACK                 0x40000398   0x10  <Block>
+    UND_STACK      uninit   0x40000398   0x10  <Block tail>
+  ABT_STACK                 0x400003a8   0x10  <Block>
+    ABT_STACK      uninit   0x400003a8   0x10  <Block tail>
+                          - 0x400003b8  0x290
+
+Absolute sections, part 1 of 18:         0x10
+  .noinit          uninit   0xe0004000    0x4  main.o [1]
+  .noinit          uninit   0xe0004004    0x4  main.o [1]
+  .noinit          uninit   0xe0004008    0x4  main.o [1]
+  .noinit          uninit   0xe000400c    0x4  main.o [1]
+                          - 0xe0004010   0x10
+
+Absolute sections, part 2 of 18:          0x8
+  .noinit          uninit   0xe0004014    0x4  main.o [1]
+  .noinit          uninit   0xe0004018    0x4  main.o [1]
+                          - 0xe000401c    0x8
+
+Absolute sections, part 3 of 18:          0x4
+  .noinit          uninit   0xe000403c    0x4  main.o [1]
+                          - 0xe0004040    0x4
+
+Absolute sections, part 4 of 18:          0x4
+  .noinit          uninit   0xe0004070    0x4  main.o [1]
+                          - 0xe0004074    0x4
+
+Absolute sections, part 5 of 18:          0xc
+  .noinit          uninit   0xe0028004    0x4  main.o [1]
+  .noinit          uninit   0xe0028008    0x4  main.o [1]
+  .noinit          uninit   0xe002800c    0x4  main.o [1]
+                          - 0xe0028010    0xc
+
+Absolute sections, part 6 of 18:          0x8
+  .noinit          uninit   0xe002c000    0x4  main.o [1]
+  .noinit          uninit   0xe002c004    0x4  main.o [1]
+                          - 0xe002c008    0x8
+
+Absolute sections, part 7 of 18:          0x4
+  .noinit          uninit   0xe01fc040    0x4  main.o [1]
+                          - 0xe01fc044    0x4
+
+Absolute sections, part 8 of 18:          0x4
+  .noinit          uninit   0xe01fc080    0x4  main.o [1]
+                          - 0xe01fc084    0x4
+
+Absolute sections, part 9 of 18:          0x4
+  .noinit          uninit   0xe01fc08c    0x4  main.o [1]
+                          - 0xe01fc090    0x4
+
+Absolute sections, part 10 of 18:         0x4
+  .noinit          uninit   0xe01fc100    0x4  main.o [1]
+                          - 0xe01fc104    0x4
+
+Absolute sections, part 11 of 18:         0x4
+  .noinit          uninit   0xe01fc140    0x4  main.o [1]
+                          - 0xe01fc144    0x4
+
+Absolute sections, part 12 of 18:         0x8
+  .noinit          uninit   0xe01fc148    0x4  main.o [1]
+  .noinit          uninit   0xe01fc14c    0x4  main.o [1]
+                          - 0xe01fc150    0x8
+
+Absolute sections, part 13 of 18:         0x4
+  .noinit          uninit   0xe01fc1a0    0x4  main.o [1]
+                          - 0xe01fc1a4    0x4
+
+Absolute sections, part 14 of 18:         0xc
+  .noinit          uninit   0xfffff00c    0x4  main.o [1]
+  .noinit          uninit   0xfffff010    0x4  main.o [1]
+  .noinit          uninit   0xfffff014    0x4  main.o [1]
+                          - 0xfffff018    0xc
+
+Absolute sections, part 15 of 18:         0x8
+  .noinit          uninit   0xfffff01c    0x4  main.o [1]
+  .noinit          uninit   0xfffff020    0x4  main.o [1]
+                          - 0xfffff024    0x8
+
+Absolute sections, part 16 of 18:         0x8
+  .noinit          uninit   0xfffff030    0x4  main.o [1]
+  .noinit          uninit   0xfffff034    0x4  main.o [1]
+                          - 0xfffff038    0x8
+
+Absolute sections, part 17 of 18:        0x40
+  .noinit          uninit   0xfffff100    0x4  main.o [1]
+  .noinit          uninit   0xfffff104    0x4  main.o [1]
+  .noinit          uninit   0xfffff108    0x4  main.o [1]
+  .noinit          uninit   0xfffff10c    0x4  main.o [1]
+  .noinit          uninit   0xfffff110    0x4  main.o [1]
+  .noinit          uninit   0xfffff114    0x4  main.o [1]
+  .noinit          uninit   0xfffff118    0x4  main.o [1]
+  .noinit          uninit   0xfffff11c    0x4  main.o [1]
+  .noinit          uninit   0xfffff120    0x4  main.o [1]
+  .noinit          uninit   0xfffff124    0x4  main.o [1]
+  .noinit          uninit   0xfffff128    0x4  main.o [1]
+  .noinit          uninit   0xfffff12c    0x4  main.o [1]
+  .noinit          uninit   0xfffff130    0x4  main.o [1]
+  .noinit          uninit   0xfffff134    0x4  main.o [1]
+  .noinit          uninit   0xfffff138    0x4  main.o [1]
+  .noinit          uninit   0xfffff13c    0x4  main.o [1]
+                          - 0xfffff140   0x40
+
+Absolute sections, part 18 of 18:        0x40
+  .noinit          uninit   0xfffff200    0x4  main.o [1]
+  .noinit          uninit   0xfffff204    0x4  main.o [1]
+  .noinit          uninit   0xfffff208    0x4  main.o [1]
+  .noinit          uninit   0xfffff20c    0x4  main.o [1]
+  .noinit          uninit   0xfffff210    0x4  main.o [1]
+  .noinit          uninit   0xfffff214    0x4  main.o [1]
+  .noinit          uninit   0xfffff218    0x4  main.o [1]
+  .noinit          uninit   0xfffff21c    0x4  main.o [1]
+  .noinit          uninit   0xfffff220    0x4  main.o [1]
+  .noinit          uninit   0xfffff224    0x4  main.o [1]
+  .noinit          uninit   0xfffff228    0x4  main.o [1]
+  .noinit          uninit   0xfffff22c    0x4  main.o [1]
+  .noinit          uninit   0xfffff230    0x4  main.o [1]
+  .noinit          uninit   0xfffff234    0x4  main.o [1]
+  .noinit          uninit   0xfffff238    0x4  main.o [1]
+  .noinit          uninit   0xfffff23c    0x4  main.o [1]
+                          - 0xfffff240   0x40
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address     Size
+          -------     ----
+Zero (__iar_zero_init3)
+    1 destination range, total size 0x8:
+          0x40000120   0x8
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module              ro code  ro data  rw data  rw data
+                                                    (abs)
+    ------              -------  -------  -------  -------
+C:\Documents and Settings\Michael Shimniok\My Documents\IAR Embedded Workbench\arm\examples\NXP\LPC2103\IARMiniDev\Leds\Jlink - Debug Flash\Obj: [1]
+    lpc2xxx_cstartup.o      244
+    main.o                1 280      140        8      240
+    ------------------------------------------------------
+    Total:                1 524      140        8      240
+
+command line: [2]
+    ------------------------------------------------------
+    Total:
+
+dl4t_tln.a: [3]
+    exit.o                   10
+    low_level_init.o          4
+    ------------------------------------------------------
+    Total:                   14
+
+rt4t_al.a: [4]
+    bwt_init3c.o
+    cexit.o                  16
+    cmain.o                  36
+    data_init3.o             84
+    zero_init3.o             40
+    ------------------------------------------------------
+    Total:                  176
+
+shs_l.a: [5]
+    exit.o                   32
+    xreturnswi.o              4
+    ------------------------------------------------------
+    Total:                   36
+
+    Gaps                      2
+    Linker created           48       16      656
+----------------------------------------------------------
+    Grand Total:          1 800      156      664      240
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                      Address  Size  Type      Object
+-----                      -------  ----  ----      ------
+?main                   0x00000858        Code  Gb  cmain.o [4]
+ABT_STACK$$Base         0x400003a8         --   Gb  - Linker created -
+ABT_STACK$$Limit        0x400003b8         --   Gb  - Linker created -
+CSTACK$$Base            0x40000128         --   Gb  - Linker created -
+CSTACK$$Limit           0x40000328         --   Gb  - Linker created -
+FIQ_STACK$$Base         0x40000388         --   Gb  - Linker created -
+FIQ_STACK$$Limit        0x40000398         --   Gb  - Linker created -
+IRQ_STACK$$Base         0x40000328         --   Gb  - Linker created -
+IRQ_STACK$$Limit        0x40000378         --   Gb  - Linker created -
+KeyChangeIntHandler     0x0000029f  0x36  Code  Gb  main.o [1]
+KeySpeedIntHandler      0x00000245  0x5a  Code  Gb  main.o [1]
+KeysInit                0x00000311  0xae  Code  Gb  main.o [1]
+LedPatterns10           0x000008dc   0x8  Data  Gb  main.o [1]
+LedPatterns11           0x000008e4   0x8  Data  Gb  main.o [1]
+LedPatterns12           0x000008ec   0x8  Data  Gb  main.o [1]
+LedPatterns13           0x000008f4   0x8  Data  Gb  main.o [1]
+LedPatterns20           0x000008fc   0x8  Data  Gb  main.o [1]
+LedPatterns21           0x00000904   0x8  Data  Gb  main.o [1]
+LedPatterns22           0x0000090c   0x8  Data  Gb  main.o [1]
+LedPatterns23           0x00000914   0x8  Data  Gb  main.o [1]
+LedPatterns24           0x0000091c   0x8  Data  Gb  main.o [1]
+LedPatterns25           0x00000924   0x8  Data  Gb  main.o [1]
+LedPatterns30           0x0000092c   0x8  Data  Gb  main.o [1]
+LedPatterns31           0x00000934   0x8  Data  Gb  main.o [1]
+LedPatterns32           0x0000093c   0x8  Data  Gb  main.o [1]
+LedPatterns33           0x00000944   0x8  Data  Gb  main.o [1]
+LedPatterns34           0x0000094c   0x8  Data  Gb  main.o [1]
+LedPatterns35           0x00000954   0x8  Data  Gb  main.o [1]
+PatternInd              0x40000120   0x4  Data  Gb  main.o [1]
+Region$$Table$$Base     0x000008c0         --   Gb  - Linker created -
+Region$$Table$$Limit    0x000008d0         --   Gb  - Linker created -
+SVC_STACK$$Base         0x40000378         --   Gb  - Linker created -
+SVC_STACK$$Limit        0x40000388         --   Gb  - Linker created -
+T0MR0                   0xe0004018   0x4  Data  Gb  main.o [1]
+T0PR                    0xe000400c   0x4  Data  Gb  main.o [1]
+T0TC                    0xe0004008   0x4  Data  Gb  main.o [1]
+Timer0Handler           0x000002d5  0x3c  Code  Gb  main.o [1]
+UND_STACK$$Base         0x40000398         --   Gb  - Linker created -
+UND_STACK$$Limit        0x400003a8         --   Gb  - Linker created -
+VICDefVectAddr          0xfffff034   0x4  Data  Gb  main.o [1]
+VICVectAddr             0xfffff030   0x4  Data  Gb  main.o [1]
+VICVectAddr0            0xfffff100   0x4  Data  Gb  main.o [1]
+VICVectAddr1            0xfffff104   0x4  Data  Gb  main.o [1]
+VICVectAddr10           0xfffff128   0x4  Data  Gb  main.o [1]
+VICVectAddr11           0xfffff12c   0x4  Data  Gb  main.o [1]
+VICVectAddr12           0xfffff130   0x4  Data  Gb  main.o [1]
+VICVectAddr13           0xfffff134   0x4  Data  Gb  main.o [1]
+VICVectAddr14           0xfffff138   0x4  Data  Gb  main.o [1]
+VICVectAddr15           0xfffff13c   0x4  Data  Gb  main.o [1]
+VICVectAddr2            0xfffff108   0x4  Data  Gb  main.o [1]
+VICVectAddr3            0xfffff10c   0x4  Data  Gb  main.o [1]
+VICVectAddr4            0xfffff110   0x4  Data  Gb  main.o [1]
+VICVectAddr5            0xfffff114   0x4  Data  Gb  main.o [1]
+VICVectAddr6            0xfffff118   0x4  Data  Gb  main.o [1]
+VICVectAddr7            0xfffff11c   0x4  Data  Gb  main.o [1]
+VICVectAddr8            0xfffff120   0x4  Data  Gb  main.o [1]
+VICVectAddr9            0xfffff124   0x4  Data  Gb  main.o [1]
+VicInit                 0x000003f5  0xea  Code  Gb  main.o [1]
+_A_APBDIV               0xe01fc100   0x4  Data  Gb  main.o [1]
+_A_EXTINT               0xe01fc140   0x4  Data  Gb  main.o [1]
+_A_EXTMODE              0xe01fc148   0x4  Data  Gb  main.o [1]
+_A_EXTPOLAR             0xe01fc14c   0x4  Data  Gb  main.o [1]
+_A_IOCLR                0xe002800c   0x4  Data  Gb  main.o [1]
+_A_IODIR                0xe0028008   0x4  Data  Gb  main.o [1]
+_A_IOSET                0xe0028004   0x4  Data  Gb  main.o [1]
+_A_MEMMAP               0xe01fc040   0x4  Data  Gb  main.o [1]
+_A_PINSEL0              0xe002c000   0x4  Data  Gb  main.o [1]
+_A_PINSEL1              0xe002c004   0x4  Data  Gb  main.o [1]
+_A_PLLCON               0xe01fc080   0x4  Data  Gb  main.o [1]
+_A_PLLFEED              0xe01fc08c   0x4  Data  Gb  main.o [1]
+_A_SCS                  0xe01fc1a0   0x4  Data  Gb  main.o [1]
+_A_T0CTCR               0xe0004070   0x4  Data  Gb  main.o [1]
+_A_T0EMR                0xe000403c   0x4  Data  Gb  main.o [1]
+_A_T0IR                 0xe0004000   0x4  Data  Gb  main.o [1]
+_A_T0MCR                0xe0004014   0x4  Data  Gb  main.o [1]
+_A_T0TCR                0xe0004004   0x4  Data  Gb  main.o [1]
+_A_VICIntEnClear        0xfffff014   0x4  Data  Gb  main.o [1]
+_A_VICIntEnable         0xfffff010   0x4  Data  Gb  main.o [1]
+_A_VICIntSelect         0xfffff00c   0x4  Data  Gb  main.o [1]
+_A_VICProtection        0xfffff020   0x4  Data  Gb  main.o [1]
+_A_VICSoftIntClear      0xfffff01c   0x4  Data  Gb  main.o [1]
+_A_VICVectCntl0         0xfffff200   0x4  Data  Gb  main.o [1]
+_A_VICVectCntl1         0xfffff204   0x4  Data  Gb  main.o [1]
+_A_VICVectCntl10        0xfffff228   0x4  Data  Gb  main.o [1]
+_A_VICVectCntl11        0xfffff22c   0x4  Data  Gb  main.o [1]
+_A_VICVectCntl12        0xfffff230   0x4  Data  Gb  main.o [1]
+_A_VICVectCntl13        0xfffff234   0x4  Data  Gb  main.o [1]
+_A_VICVectCntl14        0xfffff238   0x4  Data  Gb  main.o [1]
+_A_VICVectCntl15        0xfffff23c   0x4  Data  Gb  main.o [1]
+_A_VICVectCntl2         0xfffff208   0x4  Data  Gb  main.o [1]
+_A_VICVectCntl3         0xfffff20c   0x4  Data  Gb  main.o [1]
+_A_VICVectCntl4         0xfffff210   0x4  Data  Gb  main.o [1]
+_A_VICVectCntl5         0xfffff214   0x4  Data  Gb  main.o [1]
+_A_VICVectCntl6         0xfffff218   0x4  Data  Gb  main.o [1]
+_A_VICVectCntl7         0xfffff21c   0x4  Data  Gb  main.o [1]
+_A_VICVectCntl8         0xfffff220   0x4  Data  Gb  main.o [1]
+_A_VICVectCntl9         0xfffff224   0x4  Data  Gb  main.o [1]
+__cmain                 0x00000858        Code  Gb  cmain.o [4]
+__exit                  0x0000088c  0x20  Code  Gb  exit.o [5]
+__iar_SB                0x00000960        Data  Gb  bwt_init3c.o [4]
+__iar_data_init3        0x000007b8  0x54  Code  Gb  data_init3.o [4]
+__iar_disable_interrupt
+                        0x000006e4        Code  Gb  main.o [1]
+__iar_enable_interrupt  0x000006f8        Code  Gb  main.o [1]
+__iar_program_start     0x00000708        Code  Gb  lpc2xxx_cstartup.o [1]
+__iar_return_from_swi   0x0000095c   0x4  Code  Gb  xreturnswi.o [5]
+__iar_zero_init3        0x0000080d  0x28  Code  Gb  zero_init3.o [4]
+__low_level_init        0x0000087d   0x4  Code  Gb  low_level_init.o [3]
+__vector                0x00000000        Code  Gb  lpc2xxx_cstartup.o [1]
+__vector_0x14           0x00000014        Code  Gb  lpc2xxx_cstartup.o [1]
+_call_main              0x00000868        Code  Gb  cmain.o [4]
+_exit                   0x000008b0        Code  Gb  cexit.o [4]
+_main                   0x00000870        Code  Gb  cmain.o [4]
+data_handler            0x000006dc   0x4  Code  Gb  main.o [1]
+exit                    0x00000881   0xa  Code  Gb  exit.o [3]
+fiq_handler             0x000006d0   0x4  Code  Gb  main.o [1]
+irq_handler             0x00000200  0x44  Code  Gb  main.o [1]
+main                    0x00000531  0xd6  Code  Gb  main.o [1]
+pLedPatterns            0x000008d0   0xc  Data  Gb  main.o [1]
+pNextPattern            0x40000124   0x4  Data  Gb  main.o [1]
+prefetch_handler        0x000006d8   0x4  Code  Gb  main.o [1]
+undef_handler           0x000006d4   0x4  Code  Gb  main.o [1]
+
+
+[1] = C:\Documents and Settings\Michael Shimniok\My Documents\IAR Embedded Workbench\arm\examples\NXP\LPC2103\IARMiniDev\Leds\Jlink - Debug Flash\Obj
+[2] = command line
+[3] = dl4t_tln.a
+[4] = rt4t_al.a
+[5] = shs_l.a
+
+  1 800 bytes of readonly  code memory
+    156 bytes of readonly  data memory
+    664 bytes of readwrite data memory (+ 240 absolute)
+
+Errors: none
+Warnings: none
