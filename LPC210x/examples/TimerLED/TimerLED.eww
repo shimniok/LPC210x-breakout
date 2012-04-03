@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<workspace>
+  <project>
+    <path>$WS_DIR$\TimerLED.ewp</path>
+  </project>
+  <batchBuild>
+    <batchDefinition>
+      <name>All</name>
+      <member>
+        <project>TimerLED</project>
+        <configuration>Jlink - Debug Flash</configuration>
+      </member>
+      <member>
+        <project>TimerLED</project>
+        <configuration>Jlink - Debug RAM</configuration>
+      </member>
+    </batchDefinition>
+  </batchBuild>
+</workspace>
+
+
