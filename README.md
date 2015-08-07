@@ -1,6 +1,6 @@
 Eagle CAD files for NXP LPC2101, LPC2102, LPC2103 ARM7 Breakout Board
 
-Features
+#Features
 * Compact 36-DIP package for breadboard prototyping
 * Uses standard FTDI 6-pin header for programming
 * Program switch makes it easy to flash new programs
@@ -11,7 +11,8 @@ Features
 * Debug jumper
 * Pin 0.14 is exposed for automatic program mode with RTS
 
-examples/ - Example LPC2103 C Programs
-documentation/ - Pinouts
+#Files
+* examples/ - Example LPC2103 C Programs
+* documentation/ - Pinouts
 
 datasheet [[pdf](http://www.nxp.com/documents/data_sheet/LPC2101_02_03.pdf)]
